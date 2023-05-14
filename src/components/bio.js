@@ -20,6 +20,7 @@ const Bio = () => {
           }
           social {
             twitter
+            github
           }
         }
       }
@@ -40,17 +41,15 @@ const Bio = () => {
         width={50}
         height={50}
         quality={95}
-        alt="Profile picture"
-      />
-      {author?.name && (
+        alt="Profile picture" />
+      <div className="bio-text">
+        {author?.name && <p>{author.name}의 블로그입니다.</p>}
         <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
+          {social?.twitter && <a href={`https://twitter.com/${social.twitter}`}>트위터</a>}
           {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
-          </a>
+          {social?.github && <a href={`https://github.com/${social.github}`}>GitHub</a>}
         </p>
-      )}
+      </div>
     </div>
   )
 }

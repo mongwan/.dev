@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
-  "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "name": "mongwan-dev",
+  "private": false,
+  "description": "개인 블로그",
+  "version": "0.0.1",
+  "author": "Hyeonseok Yoo <evermongwan@gmail.com>",
   "dependencies": {
     "@fontsource/merriweather": "^4.5.14",
     "@fontsource/montserrat": "^4.5.14",
@@ -28,14 +25,13 @@
   "devDependencies": {
     "prettier": "^2.8.8"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "mongwan.dev",
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/mongwan/.dev"
   },
   "scripts": {
     "build": "gatsby build",
