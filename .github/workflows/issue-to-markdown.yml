@@ -1,0 +1,25 @@
+on:
+  issues:
+    types:
+      - labeled
+      - edited
+
+jobs:
+  issue_to_makrdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      - uses: eunjae-lee/issue-to-markdown@v1
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          # Optional parameters
+          # New files are located at `<project-root>/<dest>/<slug or issue_number>/index.md`.
+          dest: 'content/blog'
+          inject_created_at: true
+          inject_created_at_key: 'date'
+          inject_created_at_as_string: true
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'docs: update contents'
