@@ -34,7 +34,8 @@ Windows 10을 사용중이라, 재설치했더니 WSL이 1 버전으로 다운�
 그냥 기본 환경에 깔려 있는 bash를 사용해도 되지만.. 안 예쁘기도 하고 다른 장치랑 비슷하게 하려고 zsh와 oh-my-zsh를 설치했다.  
 1. zsh 설치 `sudo apt install zsh`
 2. oh-my-zsh 설치 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-3. 테마 설정 `code .zshrc`
+3. [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) 설치 `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+4. 테마 설정 `code .zshrc`
 
 ### .zshrc 파일에 추가한 것들:
 - `ZSH_THEME="agnoster"`
@@ -42,7 +43,7 @@ Windows 10을 사용중이라, 재설치했더니 WSL이 1 버전으로 다운�
 - `alias zshconfig="code ~/.zshrc"`
 - `alias ohmyzsh="code ~/.oh-my-zsh"`
 - `alias we="explorer.exe ."`  
-we로 `explorer.exe .`를 설정해두면, 해당 폴더를 바로 Windows 탐색기에서 열수 있어 편리하다.  
+we로 `explorer.exe .`를 설정해두면, 해당 폴더를 바로 Windows 탐색기에서 열수 있어 편리하다. 
 Windows Terminal이나 VS Code 설정이 동기화가 되어서 폰트 깨짐 이슈 같은 건 발생을 안했는데, 나타나면 폰트 변경해서 해결할 수 있다.
 
 ## SSH key 설정
